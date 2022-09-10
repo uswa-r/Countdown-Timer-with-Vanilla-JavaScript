@@ -43,7 +43,7 @@ const date = futureDate.getDate();
 
 const weekday = weekdays[futureDate.getDay()];
 
-giveaway.textContent = `giveaway ends on ${weekday}, ${date} ${month} ${year} ${hours}:${minuts}AM`;
+giveaway.textContent = `free one pack on ${weekday}, ${date} ${month} ${year} ${hours}:${minuts}AM`;
 
 //future time in milli-secs
 
@@ -82,5 +82,11 @@ function getRemainingTime() {
     items.forEach(function(item, index) {
         item.innerHTML = format(values[index]);
     });
+    if (t < 0) {
+        clearInterval(countdown);
+        deadline.innerHTML = `<h4 class="expired">sorry, this deal has expired!<</h4>`
+    }
 }
+//countdown
+let countdown = setInterval(getRemainingTime, 1000);
 getRemainingTime();
