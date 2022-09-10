@@ -30,8 +30,14 @@ const giveaway = document.querySelector('.giveaway');
 const deadline = document.querySelector('.deadline');
 const items = document.querySelectorAll('.deadline-format h4');
 
-let futureDate = new Date(2022, 11, 15, 10, 30, 0);
 
+// let tempDate = new Date();
+// let tempYear = new getFullYear();
+// let tempMonth = new getFullYear();
+// let tempDay = new getFullYear();
+
+let futureDate = new Date(2022, 11, 15, 10, 30, 0);
+// const futureDate = new Date(tempYear, tempMonth, tempDay + 10, 10, 30, 0);
 const year = futureDate.getFullYear();
 const hours = futureDate.getHours();
 const minuts = futureDate.getMinutes();
@@ -65,7 +71,7 @@ function getRemainingTime() {
     //calculation of all value:
     let days = t / oneDay
     days = Math.floor(days);
-    let hours = Math.floor((t % oneDay) / oneHour);
+    let hours = Math.floor((t % oneDay) / oneHour); //modulus operator
     let minutes = Math.floor((t % oneHour) / oneMinute);
     let seconds = Math.floor((t % oneMinute) / 1000);
 
