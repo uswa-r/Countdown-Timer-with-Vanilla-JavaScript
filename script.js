@@ -91,3 +91,8 @@ function getRemaindingTime() {
         deadline.innerHTML = `<h4 class="expired">sorry, this giveaway has expired!</h4>`;
     }
 }
+
+// countdown;
+let countdown = setInterval(getRemaindingTime, 1000);
+//set initial values
+getRemaindingTime();
