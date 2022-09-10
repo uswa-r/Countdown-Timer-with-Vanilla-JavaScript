@@ -44,3 +44,7 @@ const date = futureDate.getDate();
 const weekday = weekdays[futureDate.getDay()];
 
 giveaway.textContent = `giveaway ends on ${weekday}, ${date} ${month} ${year} ${hours}:${minuts}AM`;
+
+//future time in milli-secs
+
+const futureTime = futureDate.getTime();
