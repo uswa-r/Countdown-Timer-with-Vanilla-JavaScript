@@ -48,3 +48,25 @@ giveaway.textContent = `giveaway ends on ${weekday}, ${date} ${month} ${year} ${
 //future time in milli-secs
 
 const futureTime = futureDate.getTime();
+
+function getRemainingTime() {
+    const today = new Date().getTime();
+    const t = futureTime - today;
+
+    //1s = 1000ms
+    //1m = 60s
+    //1hr = 60mins
+    //1d = 24hr
+    :
+    //values in milli-sec
+    const oneDay = 24 * 60 * 60 * 1000;
+    const oneHour = 60 * 60 * 1000;
+    const oneMinute = 60 * 1000;
+    //calculation of all value:
+    let days = t / oneDay
+    days - Math.floor(days);
+
+    let hours = Math.floor((t % oneDay) / oneHour);
+    let minuts = Math.floor((t % oneHour) / oneMinute);
+}
+getRemainingTime();
