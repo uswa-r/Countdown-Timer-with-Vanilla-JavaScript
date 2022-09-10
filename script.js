@@ -25,3 +25,7 @@ const weekdays = [
     'Saturday',
 ];
 //database ends here
+
+const year = futureDate.getFullYear();
+const hours = futureDate.getHours();
+const minutes = futureDate.getMinutes();
