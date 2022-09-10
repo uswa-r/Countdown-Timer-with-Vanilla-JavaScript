@@ -25,3 +25,7 @@ const weekdays = [
     'Saturday',
 ];
 //database ends here
+
+const giveaway = document.querySelector('.giveaway');
+const deadline = document.querySelector('.deadline');
+const giveaway = document.querySelector('.giveaway');
